@@ -1,0 +1,11 @@
+---
+- name: changing service status
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: start nginx service
+      service:
+        name: nginx
+        state: stopped #change this as stopped,resterted,started
+        enabled: false #also change this whene started=true,stopped=false,restarted=true

@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts: workers
+  hosts: all
   become: yes
   tasks:
     - name: Install nginx
@@ -11,4 +11,4 @@
       service:
         name: nginx
         state: started
-        enabled: yes       
+        enabled: yes
