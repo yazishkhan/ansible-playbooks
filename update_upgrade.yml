@@ -1,0 +1,11 @@
+---
+- name: updating and upgrading
+  hosts: workers
+  become: yes
+  tasks:
+    - name: updation
+      apt:
+        update_cache: yes
+    - name: upgradition
+      apt:
+        upgrade: yes

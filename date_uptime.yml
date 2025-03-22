@@ -1,0 +1,11 @@
+---
+- name: Prints date and uptime
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Print date
+      command: date
+
+    - name: Print uptime
+      command: uptime

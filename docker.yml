@@ -1,0 +1,15 @@
+- name: For practicing the playbook
+  hosts: all
+  become: yes
+  tasks:
+   - name: install docker
+     apt:
+      name: docker.io
+      state: latest
+      update_cache: yes
+
+   - name: start docker
+     service:
+      name: docker
+      state: started
+      enabled: yes
